@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Documentation</title>
+    <link rel="stylesheet" href="styles.css"> 
+    </head>
+<body>
+
+    <nav id="navbar">
+        <header>SQL Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#SQL_Syntax">SQL Syntax</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#CRUD_Operations">CRUD Operations</a>
+        <a class="nav-link" href="#Joins">Joins</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>SQL (Structured Query Language) is used to manage relational databases.</p>
+            <p>It allows users to create, read, update, and delete data in a structured way.</p>
+            <p>SQL is widely used in web applications, analytics, and data storage.</p>
+            <pre><code>SELECT * FROM employees;</code></pre>
+        </section>
+
+        <section class="main-section" id="SQL_Syntax">
+            <header>SQL Syntax</header>
+            <p>SQL follows a structured syntax for queries.</p>
+            <p>Each statement ends with a semicolon (;).</p>
+            <ul>
+                <li>SELECT - Retrieves data</li>
+                <li>INSERT - Adds new data</li>
+                <li>UPDATE - Modifies existing data</li>
+                <li>DELETE - Removes data</li>
+            </ul>
+            <p>Different SQL databases might have small syntax variations.</p>
+            <pre><code>SELECT name FROM users WHERE age > 25;</code></pre>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>SQL supports various data types including:</p>
+            <ul>
+                <li>INT - Integer values</li>
+                <li>VARCHAR - Variable-length text</li>
+                <li>BOOLEAN - True/False values</li>
+                <li>DATE - Stores date values</li>
+            </ul>
+            <p>Choosing the correct data type optimizes storage and performance.</p>
+            <pre><code>CREATE TABLE users (id INT, name VARCHAR(50));</code></pre>
+        </section>
+
+        <section class="main-section" id="CRUD_Operations">
+            <header>CRUD Operations</header>
+            <p>CRUD stands for Create, Read, Update, Delete.</p>
+            <p>These operations form the foundation of SQL.</p>
+            <p>They are used to interact with a database.</p>
+            <pre><code>INSERT INTO users (name) VALUES ('Alice');</code></pre>
+        </section>
+
+        <section class="main-section" id="Joins">
+            <header>Joins</header>
+            <p>Joins allow combining data from multiple tables.</p>
+            <p>Types of joins include:</p>
+            <ul>
+                <li>INNER JOIN</li>
+                <li>LEFT JOIN</li>
+                <li>RIGHT JOIN</li>
+                <li>FULL OUTER JOIN</li>
+            </ul>
+            <p>Joins are useful for combining related information.</p>
+            <pre><code>SELECT orders.id, customers.name FROM orders 
+INNER JOIN customers ON orders.customer_id = customers.id;</code></pre>
+        </section>
+    </main>
+
+</body>
+</html>
